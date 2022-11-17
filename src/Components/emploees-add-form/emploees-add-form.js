@@ -1,6 +1,7 @@
 import { Component } from 'react';
 
-import './emploees-add-form.css';
+// import './emploees-add-form.css';
+import './emploees-add-form.scss';
 
 class EmploeesAddForm extends Component {
     constructor(props) {
@@ -28,6 +29,8 @@ class EmploeesAddForm extends Component {
 
     render() {
     const {name, salary} = this.state;
+    const isValid = Boolean(this.state.name.length >= 3 && this.state.salary > 100 && this.state.salary !== 0);
+    // const isValid1 = Boolean(this.state.salary > 100 && this.state.salary !== 0);
         return (
             <div className="app-add-form">
                 <h3>Add new emploee</h3>
@@ -48,7 +51,8 @@ class EmploeesAddForm extends Component {
                         onChange={this.onValueChange}/>
     
                     <button type="submit"
-                            className="btn btn-outline-light">Add</button>
+                            className="btn btn-outline-light"
+                            disabled={!isValid}>Add</button>
                 </form>
             </div>
         )
