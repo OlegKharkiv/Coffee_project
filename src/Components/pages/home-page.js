@@ -1,6 +1,7 @@
 import Header from "../../Header/header";
 import Line from "../images/Line.svg";
 import HomeImage from "../images/Main bg.jpg";
+import HomeTabsBgImage from '../images/paper_bg_coffee.jpg';
 import CoffeeBeans from "../images/Group.svg";
 import CoffeeBeansBlack from "../images/Group_black.svg";
 
@@ -12,7 +13,7 @@ const HomePage = () => {
             <div className="HomePage">
                 <div className="home__image">
                         <img src={HomeImage} alt="Background home screen" />
-                    </div>
+                </div>
                 <div className="home">
                     <>
                         <Header/>
@@ -30,7 +31,6 @@ const HomePage = () => {
                             <button className="btn btn_white">More</button>
                         </div>
                     </div>
-                    
                 </div>
 
                 <div className="about _container">
@@ -52,7 +52,16 @@ const HomePage = () => {
                                 repair day ladies now.</p>
                             </div>
                         </div>
+                </div>
+                <div className="bestsellers _container">
+                    <div className="bestsellers__bg_image">
+                            <img src={HomeTabsBgImage} alt="Background screen for tabs" />
                     </div>
+                    <div className="our-best">
+                        <h2>Our best</h2>
+
+                    </div>
+                </div>
             </div>
     );
 }
