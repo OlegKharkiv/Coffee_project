@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route, Routes, useLocation} from 'react-router
 import Header from '../../Header/header'; 
 
 import HomePage from '../pages/home-page';
-import CoffeePage from '../pages/coffe-page';
+// import CoffeePage from '../pages/coffe-page';
 import CoffeeItemPage from '../pages/coffe-item-page';
 
 import './app.css';
@@ -24,6 +24,7 @@ function App () {
                             <CoffeeItemPage />
                         </Route> */}
                     </Route>
+                    <Route path='/Our coffee' element={<CoffeeItemPage />}></Route>
                 </Routes>
             </Router>
         );

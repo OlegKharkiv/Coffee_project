@@ -1,0 +1,258 @@
+@import '../../style/index.scss';
+
+.coffee-item-page {
+    max-width: 1440px;
+    max-height: 1805px;
+    margin: 0 auto;
+    overflow: hidden;
+    @media (max-width: $md2+px) {
+        max-height: 100%;
+    }
+    @media (max-width: $md4+px) {
+        max-height: 100%;
+    }
+
+    .coffe-item__image{
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+    .coffe-item__image img {
+        max-width: 100%;
+        height: 260px;
+        top: 0;
+        object-fit: cover;
+        position: absolute;
+    }
+    .coffe-item{
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-flex;
+        margin: 8.125rem 0rem 0rem 38rem;
+        @media (max-width: $md2+px) {
+            margin: 8.125rem 0rem 0rem 25rem;
+        }
+        @media (max-width: $md3+px) {
+            margin: 8.125rem 0rem 0rem 18rem;
+        }
+        @media (max-width: 480+px) {
+            margin: 8.125rem 0rem 0rem 12rem;
+        }
+        
+
+            .coffe-item__title{
+                font-family: 'Merienda';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 40px;
+                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                padding: 0px 0px 20px 0px;
+                @media (max-width: $md2+px) {
+                    margin: 0px -5rem;
+                }
+                @media (max-width: $md3+px) {
+                    font-size: 18px;
+                    margin: 0px -1rem;
+                }
+                @media (max-width: 419+px) {
+                    margin: 0px -1rem;
+                }
+            }
+    }
+
+    .about {
+        position: relative;
+        padding-top: 67px;
+        height: 522px;
+        display: flex;
+        @media (max-width: $md2+px) {
+            padding: 5px;
+            margin: 170px 0px 0px 0px;
+            height: 100%;
+        }
+        @media (max-width: $md4+px) {
+            padding: 5px;
+            height: 100%;
+        }
+        
+        .about__wrapper {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            width: 1440px;
+            padding: 70px 295px 0px 280px;
+            justify-content: space-between;
+            @media (max-width: 1279+px) {
+                padding: 70px 295px 0px 150px;
+            }
+            @media (max-width: $md2+px) {
+                margin: -90px 0px 0px 0px;
+                flex-direction: column;
+                padding: 0px;
+            }
+            @media (max-width: $md3+px) {
+                margin: 20px 16px 0px 30px;
+                width: 100%;
+                padding: 5px;
+                flex-direction: column;
+            }
+            @media (max-width: 419+px) {
+                margin: 80px 16px 0px -45px;
+                width: 100%;
+                padding: 5px;
+                flex-direction: column;
+            }
+
+            .coffe-item__pack{
+                height: 100%;
+                width: 100%;
+                flex: 1 1 50%;
+            }
+
+            .coffe-item__pack img{
+                width: 392px;
+                height: 355px;
+                object-fit: cover;
+                position: relative;
+                margin: 0px 6px 0px 0px;
+                @media (max-width: $md2+px) {
+                    width: 292px;
+                    height: 255px;
+                }
+                @media (max-width: $md3+px) {
+                    width: 192px;
+                    height: 155px;
+                    top: 109px;
+                }
+                @media (max-width: 419+px) {
+                    width: 151px;
+                    height: 105px;
+                    margin: 0px 0px 0px 39px;
+                }
+            }
+
+            // .coffe-item__pack::before {
+            //     content: '';
+            //     display: block;
+            //     width: 100%;
+            //     height: 100%;
+            //     top: 0;
+            //     left: 0;
+            //     position: absolute;
+            //     background: drop-shadow(5px 5px 30px rgba(0, 0, 0, 0.25));
+            // }
+            
+            .home__beans-logo{
+                padding: 55px 0px 0px 197px;
+                margin: 0px 0px 25px 0px;
+                position: relative;
+                @media (max-width: $md3+px) {
+                    margin: 0px 0px 28px -152px;
+                }
+                @media (max-width: 419+px) {
+                    padding: 4px 0px 0px 16px;
+                    margin: 0px 0px 17px -31px;
+                    position: relative;
+                }
+            }
+
+            .home__beans-logo::before{
+                display: block;
+                width: 60.45px;
+                content: "";
+                position: absolute;
+                border-bottom: 1px solid #000;
+                margin: 15px 0px 0px 55px;
+            }
+
+            .home__beans-logo::after{
+                display: block;
+                width: 60.45px;
+                content: "";
+                position: absolute;
+                border-bottom: 1px solid #000;
+                margin: -19px 0px 0px -85px;
+            }
+
+            .about__it {
+                margin: 0px 0px 0px 55px;
+                flex: 1 1 50%;
+                @media (max-width: $md2+px) {
+                    position: relative;
+                    margin: -273px 0px 0px 359px;
+                }
+                @media (max-width: $md3+px) {
+                    position: relative;
+                    margin: -170px 0px 0px 200px;
+                }
+
+                & h2 {
+                    font-family: 'Merienda';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 24px;
+                    color: #000000;
+                    position: absolute;
+                    margin: 0px 0px 0px 161px;
+                    @media (max-width: $md3+px) {
+                        font-size: 18px;
+                        margin: 0rem 2rem;
+                    }
+                    @media (max-width: 419+px) {
+                        font-size: 16px;
+                        margin: -28px 0px 0px -30px;
+                    }
+                }
+                .about__it-description {
+                    padding: 0px 0px;
+                    @media (max-width: $md3+px) {
+                        padding: 0px 0.5rem;
+                    }
+                }
+                .about__it-description p {
+                    font-family: 'Merienda';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    color: #000000;
+                    padding: 0px 0px 16px 0px;
+                    & strong {
+                        color: #000000;
+                    }
+                    @media (max-width: $md2+px) {
+                        width: 380px;
+                    }
+                    @media (max-width: $md3+px) {
+                        width: 280px;
+                    }
+                    @media (max-width: 419+px) {
+                        width: 200px;
+                    }
+                }
+                .about__it-description p:last-child {
+                    font-style: normal;
+                    padding-top: 20px;
+                    color: #000000;
+                }
+                .coffe-item__item-price span {
+                    font-family: 'Merienda';
+                    font-style: bold;
+                    font-weight: 700;
+                    font-size: 14px;
+                    color: #000000;
+
+                    & strong {
+                        font-family: 'Merienda';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 24px;
+                        color: #000000;
+                    }
+                }
+
+            }
+        }
+    }
+}

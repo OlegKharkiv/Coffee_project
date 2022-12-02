@@ -1,4 +1,17 @@
-@import '../../style/index.scss'; 
+@import '../../style/index.scss';
+
+.HomePage {
+    max-width: 1480px;
+    max-height: 1805px;
+    margin: 0 auto;
+    overflow: hidden;
+    @media (max-width: $md2+px) {
+        max-height: 100%;
+    }
+    @media (max-width: $md4+px) {
+        max-height: 100%;
+    }
+}
 
 .home__image{
     height: 100%;
@@ -10,21 +23,22 @@
     max-width: 100%;
     height: 640px;
     top: 0;
-    left: 0;
     object-fit: cover;
     position: absolute;
+    @media (max-width: $md4+px) {
+        height: 390px;
+    }
 }
 .home{
     position: relative;
+    margin-bottom: 201px;
     
-
     .home__content{
-        z-index: 2;
         position: relative;
-        margin: 0px auto;
         display: flex;
         align-items: center;
         flex-direction: column;
+        margin: 0px 0px 0px 0px;
         @media (max-width: $md3+px) {
             font-size: 18px;
         }
@@ -44,13 +58,26 @@
         .home__beans-logo{
             padding: 0px 0px 23px 0px
         }
-        .home__beans-logo-line-right {
-            padding: 0px 0px 15px 0px
+        .home__beans-logo::before{
+            display: block;
+            width: 60.45px;
+            content: "";
+            position: absolute;
+            border-bottom: 1px solid #FFFFFF;
+            top: 50%;
+            margin: -43px 0px 0px -84px;
         }
-        .home__beans-logo-screen{}
-        .home__beans-logo-line-left{
-            padding: 0px 0px 15px 0px
+
+        .home__beans-logo::after{
+            display: block;
+            width: 60.45px;
+            content: "";
+            position: absolute;
+            border-bottom: 1px solid #FFFFFF;
+            top: 50%;
+            margin: -43px 0px 0px 61px;
         }
+
         .home__promotion-phrase{
             font-family: 'Merienda';
             font-style: normal;
@@ -93,10 +120,10 @@
             background: none;
             padding: 3px 0px;
         }
-        .home__bottom button:hover{
-            box-shadow: 0 4px 30px rgba(0, 0, 0, .3);
-            cursor: pointer;
-        }
+        // .home__bottom button:hover{
+        //     box-shadow: 0 4px 30px rgba(0, 0, 0, .3);
+        //     cursor: pointer;
+        // }
         .home__bottom:hover{
             box-shadow: 0 4px 30px rgba(0, 0, 0, .3);
             cursor: pointer;
@@ -107,25 +134,37 @@
 
 .about {
     position: relative;
-    margin-top: 199px;
-    @media (max-width: $md3+px) {
-        margin-top: 280px;
+    padding-top: 50px;
+    height: 520px;
+    @media (max-width: $md2+px) {
+        padding: 10px;
+        height: 100%;
     }
-
+    @media (max-width: $md4+px) {
+        padding: 10px;
+        height: 100%;
+    }
+    
     .about__us {
-        z-index: 2;
         position: relative;
-        margin: 0px auto;
         display: flex;
         align-items: center;
         flex-direction: column;
         width: 593.41px;
-        height: 223px;
-        @media (max-width: $md3+px) {
-            width: 100%;
-            height: 100%;
+        margin: 0px 428px;
+        @media (max-width: 1450+px) {
+            margin: 0px auto;
         }
-
+        @media (max-width: $md2+px) {
+            margin: 0px auto;
+            padding: 65px;
+        }
+        @media (max-width: $md4+px) {
+            margin: -213px 16px 0px 4px;
+            width: 100%;
+            padding: 25px;
+        }
+        
         & h2 {
             font-family: 'Merienda';
             font-style: normal;
@@ -134,6 +173,9 @@
             line-height: 35px;
             color: #000000;
             align-items: center;
+            @media (max-width: $md3+px) {
+                font-size: 18px;
+            }
         }
         
         .home__beans-logo{
@@ -173,8 +215,147 @@
             color: #000000;
         }
         .about__us-description p:last-child {
-            padding-top: 10px;
+            padding-top: 20px;
         }
     }
 }
+
+.bestsellers{
+    position: relative;
+    width: 1450px; 
+    height: 512px;
+    margin: -20px 0px 0px 0px;
+    padding: 3px 0px;
+    background-image: url('../images/paper_bg_coffee.jpg');
+    @media (max-width: $md2+px) {
+        width:100%;
+        height: 100%;
+    }
+    @media (max-width: $md4+px) {
+        width:100%;
+        height: 100%;
+    }
+    
+        .title {
+            font-family: 'Merienda';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 35px;
+            color: #000000;
+            position: relative;
+            display:inline-flex;
+            margin: 79px 669px 0px 668px;
+            @media (max-width: 1450+px) {
+                margin: 5% 0% 0% 47%;
+            }
+            @media (max-width: 1280+px) {
+                padding: 39px 379px 0px 0px;
+                margin: 0px 0px 0px 591px;
+            }
+            @media (max-width: 1024+px) {
+                margin: 5% 0% 0% 31%; 
+            }
+            @media (max-width: $md2+px) {
+                margin: 5% 25% 0% 44%;
+            }
+            @media (max-width: $md4+px) {
+                margin: 5% 25% 0% 37%;
+            }
+        }
+        .our-best-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-right: 320px;
+            padding: 39px 0px 0px 350px;
+            position: relative;
+            @media (max-width: 1450+px) {
+                padding: 39px 277px 0px 0px;
+                margin: 0px 0px 0px 320px;
+            }
+            @media (max-width: 1280+px) {
+                padding: 39px 434px 0px 0px;
+                margin: 0px 0px 0px 188px;
+            }
+            @media (max-width: 1024+px) {
+                padding: 20px 571px 0px 122px;
+                margin: 0px auto; 
+            }
+            @media (max-width: $md2+px) {
+                margin-right: auto;
+                flex-direction: column;
+                align-items: center;
+                padding: 0; 
+            }
+            @media (max-width: $md4+px) {
+                margin-right: auto;
+                flex-direction: column;
+                align-items: center;
+                padding: 0;
+            }
+
+            .card__item {
+                width: 221px;
+                min-height: 240px;
+                box-shadow: 0 4px 25px rgb(0 0 0 / 25%);
+                font-size: 16px;
+                font-weight: 300;
+                background: rgba(255, 255, 255, 0.65);
+                border-radius: 8px;
+                position: relative;
+                @media (max-width: $md2+px) {
+                    margin-top: 10px;
+                    
+                }
+                @media (max-width: $md4+px) {
+                    margin-top: 10px;
+                }
+            }
+            .card__item:hover{
+                cursor: pointer;
+                transition: 1s;
+                transform: scale(1.2);
+            }
+        
+            .card__item img {
+                margin: 22px 0px 0px 33px;
+                position: relative;
+                width: 152px;
+                height: 130px;
+                margin: 22px 0px 0px 33px;
+                z-index: 1;
+            }
+            
+            .card__item-subtitle {
+                font-family: 'Merienda';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 20px;
+                text-align: center;
+                color: #000000;
+                padding: 14px 0px 10px 0px;
+            }
+            .card__item-price span{
+                font-family: 'Merienda';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 20px;
+                color: #000000;
+                padding: 0px 154px;
+            }
+        }
+}
+    .bestsellers::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        background: rgba(255 255 255 / 21%);
+    }
 
